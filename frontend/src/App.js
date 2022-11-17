@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { Routes, Route } from "react-router-dom";
-import { LibraryPage } from "./pages/LibraryPage";
-
-=======
 import { Routes, Route, Navigate } from "react-router-dom";
 import  {HomePage}  from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
@@ -15,7 +10,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "./redux/userSlice";
 import { useEffect } from "react";
 import { LibraryPage } from "./pages/LibraryPage";
->>>>>>> master
 
 function App() {
   const dispatch = useDispatch();
@@ -43,12 +37,6 @@ function App() {
 
   return (
     <div>
-<<<<<<< HEAD
-      <Routes>
-        <Route path="/" element={<LibraryPage />} />
-      </Routes>
-      
-=======
       <NavbarComp />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -57,7 +45,6 @@ function App() {
         <Route path="/verification/:token" element={<VerificationPage />} />
         <Route path="/" element={<LibraryPage />} />
       </Routes>
->>>>>>> master
     </div>
   );
 }
