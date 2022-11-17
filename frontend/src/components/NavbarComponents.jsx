@@ -23,7 +23,7 @@ import { logout } from "../redux/userSlice";
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children }) => {
   <Link
     px={2}
     py={1}
@@ -35,7 +35,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
     href={'#'}>
     {children}
   </Link>
-);
+  }
 
 const NavbarComp = () => {
 const { isOpen, onOpen, onClose } = useDisclosure();
