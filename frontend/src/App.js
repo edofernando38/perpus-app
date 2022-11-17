@@ -9,6 +9,7 @@ import Axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "./redux/userSlice";
 import { useEffect } from "react";
+import { LibraryPage } from "./pages/LibraryPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +43,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/verification/:token" element={<VerificationPage />} />
+        <Route path="/" element={<LibraryPage />} />
       </Routes>
     </div>
   );

@@ -11,14 +11,10 @@ server.use(bearerToken());
 
 
 server.get("/", (req, res) => {
-    res.status(200).send("Welcome to my API")
+
+    res.status(200).send("Welcome to My API")
 })
 
-const {userRoutes} = require("./routers")
-server.use("/users", userRoutes)
+console.log("register")
 
 
-server.listen(port, () => {
-    // db.sequelize.sync({alter:true})
-    console.log(`Success Running port at : ${port}`)
-})
